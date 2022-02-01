@@ -1,6 +1,6 @@
 {
-  "name": "rescript-project-template",
-  "version": "0.0.1",
+  "name": "rescript-anymatch",
+  "version": "0.1.0",
   "description": "Rescrip project template",
   "main": "./Main.bs.js",
   "scripts": {
@@ -14,11 +14,12 @@
   "contributors": [
     "Roman Pominov"
   ],
-  "homepage": "https://github.com/rpominov/rescript-project-template#readme",
-  "bugs": "https://github.com/rpominov/rescript-project-template/issues",
-  "repository": "github:rpominov/rescript-project-template",
+  "homepage": "https://github.com/rpominov/rescript-anymatch#readme",
+  "bugs": "https://github.com/rpominov/rescript-anymatch/issues",
+  "repository": "github:rpominov/rescript-anymatch",
   "license": "MIT",
   "dependencies": {
-    "rescript": "*"
+    "anymatch": "^3.1.2",
+    "rescript": "^9.1.4"
   }
 }

@@ -1,11 +1,11 @@
-# rescript-project-template
+# rescript-anymatch
 
-ReScript bindings for ...
+ReScript bindings for [anymatch](https://github.com/micromatch/anymatch)
 
 ## Installation
 
 ```sh
-npm i rescript-project-template
+npm i rescript-anymatch
 ```
 
 In your `bsconfig.json` add it to `bs-dependencies`
@@ -13,6 +13,6 @@ In your `bsconfig.json` add it to `bs-dependencies`
 ```
 {
   ...,
-  "bs-dependencies": [..., "rescript-project-template"],
+  "bs-dependencies": [..., "rescript-anymatch"],
 }
 ```
