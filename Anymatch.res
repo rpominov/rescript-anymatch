@@ -1,10 +1,27 @@
 type matcher
 
-external pathToMatcher: string => matcher = "%identity"
-external globToMatcher: string => matcher = "%identity"
-external regexToMatcher: Js.Re.t => matcher = "%identity"
-external fnToMatcher: (string => bool) => matcher = "%identity"
+external path: string => matcher = "%identity"
+external glob: string => matcher = "%identity"
+external regex: Js.Re.t => matcher = "%identity"
+external fun: (string => bool) => matcher = "%identity"
 
-@module external matchString: (array<matcher>, string) => bool = "anymatch"
+@module
+external anymatch: (array<matcher>, option<string>, option<Picomatch.options>, . string) => bool =
+  "anymatch"
+let anymatch = (~options=?, matchers) => {
+  let fn = anymatch(matchers, None, options)
+  str => fn(. str)
+}
 
-// TODO: options (need rescript-picomatch)
+@module
+external anymatchIndex: (
+  array<matcher>,
+  option<string>,
+  option<Picomatch.options>,
+  . string,
+  bool,
+) => int = "anymatch"
+let anymatchIndex = (~options=?, matchers) => {
+  let fn = anymatchIndex(matchers, None, options)
+  str => fn(. str, true)
+}

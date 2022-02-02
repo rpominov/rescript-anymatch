@@ -1,6 +1,6 @@
 {
   "name": "rescript-anymatch",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "namespace": false,
   "sources": {
     "dir": ".",
@@ -11,7 +11,7 @@
     "in-source": true
   },
   "suffix": ".bs.js",
-  "bs-dependencies": [],
+  "bs-dependencies": ["rescript-picomatch"],
   "warnings": {
     "error": "+101"
   }
