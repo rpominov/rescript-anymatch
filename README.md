@@ -48,7 +48,7 @@ Anymatch.anymatch(~options=Picomatch.options(~dot=true, ()), matchers, "path/any
 
 ## Caveats
 
-The original library can accept an array instead of a string as a match target. Here what it does in that case:
+The original library can accept an array instead of a string as a match target. Here's what it does in that case:
 
 > If passed as an array, the first element of the array will be used as the testString for non-function matchers, while the entire array will be applied as the arguments for function matchers.
 
